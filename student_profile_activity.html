@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Profile Activity | Renchel N. Silvosa</title>
+  <link rel="stylesheet" href="student_profile_activity.css" />
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero-card">
+      <div class="hero-copy">
+        <p class="hero-label">Student Profile Activity</p>
+        <h1 class="hero-title" id="projectTitle">Loading...</h1>
+        <p class="hero-subtitle" id="welcomeMessage"></p>
+        <div class="hero-chips">
+          <span id="courseYear"></span>
+          <span id="age"></span>
+          <span id="location"></span>
+        </div>
+        <p class="hero-motto" id="motto"></p>
+        <a class="download-btn" href="resume.pdf" download>Download Resume</a>
+      </div>
+      <div class="hero-avatar">
+        <img id="profileImage" src="id pic.jpeg" alt="Profile photo of Renchel N. Silvosa" />
+      </div>
+    </header>
+
+    <section class="content-grid">
+      <article class="profile-card about-card">
+        <h2>About Me</h2>
+        <p id="shortBio"></p>
+        <ul class="detail-list">
+          <li><strong>Full Name:</strong> <span id="fullName"></span></li>
+          <li><strong>Course and Year:</strong> <span id="detailCourseYear"></span></li>
+          <li><strong>Age:</strong> <span id="detailAge"></span></li>
+          <li><strong>Address:</strong> <span id="address"></span></li>
+          <li><strong>Career Goals:</strong> <span id="careerGoals"></span></li>
+        </ul>
+      </article>
+
+      <article class="profile-card education-card">
+        <h2>Educational Background</h2>
+        <ul class="detail-list" id="educationList"></ul>
+      </article>
+
+      <article class="profile-card skills-card">
+        <h2>Skills</h2>
+        <div class="skill-grid">
+          <div>
+            <h3>Technical Skills</h3>
+            <p id="technicalSkills"></p>
+          </div>
+          <div>
+            <h3>Programming Languages</h3>
+            <p id="programmingLanguages"></p>
+          </div>
+          <div>
+            <h3>Software Applications</h3>
+            <p id="softwareApps"></p>
+          </div>
+          <div>
+            <h3>Soft Skills</h3>
+            <p id="softSkills"></p>
+          </div>
+        </div>
+      </article>
+
+      <article class="profile-card project-card">
+        <h2>Featured Project</h2>
+        <ul class="detail-list">
+          <li><strong>Project Title:</strong> <span id="projectTitleDetail"></span></li>
+          <li><strong>Description:</strong> <span id="projectDescription"></span></li>
+          <li><strong>Technologies Used:</strong> <span id="projectTechnologies"></span></li>
+          <li><strong>Status:</strong> <span id="projectStatus"></span></li>
+          <li><strong>Project Link:</strong> <a id="projectLink" href="#" target="_blank" rel="noreferrer">Not available</a></li>
+        </ul>
+      </article>
+
+      <article class="profile-card achievements-card">
+        <h2>Certificates & Achievements</h2>
+        <ul class="detail-list">
+          <li><strong>Trainings Attended:</strong> <span id="trainings"></span></li>
+          <li><strong>Seminars / Workshops:</strong> <span id="seminars"></span></li>
+          <li><strong>Certificates Earned:</strong> <span id="certificates"></span></li>
+          <li><strong>Academic Awards:</strong> <span id="awards"></span></li>
+        </ul>
+      </article>
+
+      <article class="profile-card gallery-card">
+        <h2>Gallery Summary</h2>
+        <div class="gallery-grid">
+          <div><strong>Personal Photos</strong><span id="personalPhotos"></span></div>
+          <div><strong>School Activities</strong><span id="schoolActivities"></span></div>
+          <div><strong>Organizational Activities</strong><span id="orgActivities"></span></div>
+          <div><strong>Community Involvement</strong><span id="communityInvolvement"></span></div>
+        </div>
+      </article>
+
+      <article class="profile-card contact-card">
+        <h2>Contact Me</h2>
+        <ul class="detail-list">
+          <li><strong>Email Address:</strong> <span id="email"></span></li>
+          <li><strong>Mobile Number:</strong> <span id="mobileNumber"></span></li>
+          <li><strong>Facebook Profile:</strong> <span id="facebook"></span></li>
+          <li><strong>LinkedIn Profile:</strong> <span id="linkedin"></span></li>
+        </ul>
+      </article>
+    </section>
+
+    <footer class="page-footer">
+      <p>© Renchel N. Silvosa • Last Updated July 6, 2026</p>
+    </footer>
+  </main>
+
+  <script src="student_profile_activity.js"></script>
+</body>
+</html>
