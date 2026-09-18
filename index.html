@@ -17,7 +17,12 @@
   <nav class="top-nav">
     <div class="nav-container">
       <div class="nav-brand">TERM_OS <span>v2.0</span></div>
-      <div class="nav-links">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links" id="navLinks">
         <a href="#hero">INIT</a>
         <a href="#about">SYS_INFO</a>
         <a href="#education">EDU</a>
@@ -62,11 +67,11 @@
         <div class="card-body">
           <p id="shortBio" class="bio-text"></p>
           <div class="data-list">
-            <div class="data-item"><span class="d-label">NAME_ID </span><span class="d-val" id="fullName"></span></div>
-            <div class="data-item"><span class="d-label">RANK </span><span class="d-val" id="detailCourseYear"></span></div>
-            <div class="data-item"><span class="d-label">LIFESPAN </span><span class="d-val" id="detailAge"></span></div>
-            <div class="data-item"><span class="d-label">BASE </span><span class="d-val" id="address"></span></div>
-            <div class="data-item"><span class="d-label">OBJECTIVE </span><span class="d-val" id="careerGoals"></span></div>
+            <div class="data-item"><span class="d-label">NAME_ID</span><span class="d-val" id="fullName"></span></div>
+            <div class="data-item"><span class="d-label">RANK</span><span class="d-val" id="detailCourseYear"></span></div>
+            <div class="data-item"><span class="d-label">LIFESPAN</span><span class="d-val" id="detailAge"></span></div>
+            <div class="data-item"><span class="d-label">BASE</span><span class="d-val" id="address"></span></div>
+            <div class="data-item"><span class="d-label">OBJECTIVE</span><span class="d-val" id="careerGoals"></span></div>
           </div>
         </div>
       </section>
@@ -108,8 +113,8 @@
           <h3 id="projectTitleDetail"></h3>
           <p class="proj-desc" id="projectDescription"></p>
           <div class="data-list">
-            <div class="data-item"><span class="d-label">STACK </span><span class="d-val" id="projectTechnologies"></span></div>
-            <div class="data-item"><span class="d-label">STATUS </span><span class="d-val" id="projectStatus"></span></div>
+            <div class="data-item"><span class="d-label">STACK</span><span class="d-val" id="projectTechnologies"></span></div>
+            <div class="data-item"><span class="d-label">STATUS</span><span class="d-val" id="projectStatus"></span></div>
           </div>
           <a class="action-btn sm-btn" id="projectLink" href="#" target="_blank" rel="noreferrer">EXECUTE_PROJECT</a>
         </div>
@@ -119,10 +124,10 @@
         <div class="card-header">NETWORK::PING</div>
         <div class="card-body">
           <div class="data-list network-list">
-            <div class="data-item"><span class="d-label">MAIL </span><span class="d-val" id="email"></span></div>
-            <div class="data-item"><span class="d-label">COMMS </span><span class="d-val" id="mobileNumber"></span></div>
-            <div class="data-item"><span class="d-label">SOCIAL </span><span class="d-val" id="facebook"></span></div>
-            <div class="data-item"><span class="d-label">LINK </span><span class="d-val" id="linkedin"></span></div>
+            <div class="data-item"><span class="d-label">MAIL</span><span class="d-val" id="email"></span></div>
+            <div class="data-item"><span class="d-label">COMMS</span><span class="d-val" id="mobileNumber"></span></div>
+            <div class="data-item"><span class="d-label">SOCIAL</span><span class="d-val" id="facebook"></span></div>
+            <div class="data-item"><span class="d-label">LINK</span><span class="d-val" id="linkedin"></span></div>
           </div>
         </div>
       </section>

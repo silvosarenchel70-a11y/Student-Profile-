@@ -48,6 +48,25 @@ const buildEducation = () => {
     .join('');
 };
 
+const setupNavigation = () => {
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+
+  if (navToggle && navLinks) {
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      navToggle.classList.toggle('open');
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        navToggle.classList.remove('open');
+      });
+    });
+  }
+};
+
 const setupProfile = () => {
   insertText('projectTitle', profileData.projectTitle);
   insertText('welcomeMessage', profileData.welcomeMessage);
@@ -71,7 +90,7 @@ const setupProfile = () => {
   insertText('projectStatus', profileData.featuredProject.status);
 
   const projLink = document.getElementById('projectLink');
-  if(projLink) projLink.href = profileData.featuredProject.link;
+  if (projLink) projLink.href = profileData.featuredProject.link;
 
   insertText('email', profileData.contact.email);
   insertText('mobileNumber', profileData.contact.mobileNumber);
@@ -80,6 +99,7 @@ const setupProfile = () => {
 };
 
 window.addEventListener('DOMContentLoaded', () => {
+  setupNavigation();
   buildEducation();
   setupProfile();
 });
