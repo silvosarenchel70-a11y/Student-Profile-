@@ -1,115 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Student Profile Activity | Renchel N. Silvosa</title>
-  <link rel="stylesheet" href="student_profile_activity.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Profile | Renchel N. Silvosa</title>
+  <link rel="stylesheet" href="student_profile_activity.css">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <main class="page-shell">
-    <header class="hero-card">
-      <div class="hero-copy">
-        <p class="hero-label">Student Profile Activity</p>
-        <h1 class="hero-title" id="projectTitle">Loading...</h1>
-        <p class="hero-subtitle" id="welcomeMessage"></p>
-        <div class="hero-chips">
-          <span id="courseYear"></span>
-          <span id="age"></span>
-          <span id="location"></span>
-        </div>
-        <p class="hero-motto" id="motto"></p>
-        <a class="download-btn" href="Simple-Professional-CV-Resume.pdf" download>Download Resume</a>
+
+  <div class="bg-container">
+    <div class="bg-image"></div>
+    <div class="scanlines"></div>
+  </div>
+
+  <nav class="top-nav">
+    <div class="nav-container">
+      <div class="nav-brand">TERM_OS <span>v2.0</span></div>
+      <div class="nav-links">
+        <a href="#hero">INIT</a>
+        <a href="#about">SYS_INFO</a>
+        <a href="#education">EDU</a>
+        <a href="#skills">SKILLS</a>
+        <a href="#project">PROJECTS</a>
+        <a href="#contact">PING</a>
       </div>
-      <div class="hero-avatar">
-        <img id="profileImage" src="id-pic.jpeg" alt="Profile photo of Renchel N. Silvosa" />
+    </div>
+  </nav>
+
+  <main class="container">
+    <header id="hero" class="hero-section">
+      <div class="hero-content">
+        <div class="tag-line" id="projectTitle"></div>
+        <h1 class="main-title">Renchel N. <span class="highlight">Silvosa</span></h1>
+        <p class="subtitle" id="welcomeMessage"></p>
+
+        <div class="stats-bar">
+          <div class="stat"><span class="lbl">LVL:</span><span id="courseYear"></span></div>
+          <div class="stat"><span class="lbl">AGE:</span><span id="age"></span></div>
+          <div class="stat"><span class="lbl">LOC:</span><span id="location"></span></div>
+        </div>
+
+        <div class="quote-box">
+          > <span id="motto"></span><span class="cursor">_</span>
+        </div>
+
+        <a class="action-btn" href="Simple-Professional-CV-Resume.pdf" download>DOWNLOAD_RESUME.exe</a>
+      </div>
+
+      <div class="hero-visual">
+        <div class="avatar-wrapper">
+          <img id="profileImage" src="id-pic.jpeg" alt="Renchel N. Silvosa">
+          <div class="scanner-line"></div>
+        </div>
       </div>
     </header>
 
-    <section class="content-grid">
-      <article class="profile-card about-card">
-        <h2>About Me</h2>
-        <p id="shortBio"></p>
-        <ul class="detail-list">
-          <li><strong>Full Name:</strong> <span id="fullName"></span></li>
-          <li><strong>Course and Year:</strong> <span id="detailCourseYear"></span></li>
-          <li><strong>Age:</strong> <span id="detailAge"></span></li>
-          <li><strong>Address:</strong> <span id="address"></span></li>
-          <li><strong>Career Goals:</strong> <span id="careerGoals"></span></li>
-        </ul>
-      </article>
-
-      <article class="profile-card education-card">
-        <h2>Educational Background</h2>
-        <ul class="detail-list" id="educationList"></ul>
-      </article>
-
-      <article class="profile-card skills-card">
-        <h2>Skills</h2>
-        <div class="skill-grid">
-          <div>
-            <h3>Technical Skills</h3>
-            <p id="technicalSkills"></p>
-          </div>
-          <div>
-            <h3>Programming Languages</h3>
-            <p id="programmingLanguages"></p>
-          </div>
-          <div>
-            <h3>Software Applications</h3>
-            <p id="softwareApps"></p>
-          </div>
-          <div>
-            <h3>Soft Skills</h3>
-            <p id="softSkills"></p>
+    <div class="content-grid">
+      <section id="about" class="card card-wide">
+        <div class="card-header">SYS_INFO::ABOUT_ME</div>
+        <div class="card-body">
+          <p id="shortBio" class="bio-text"></p>
+          <div class="data-list">
+            <div class="data-item"><span class="d-label">NAME_ID </span><span class="d-val" id="fullName"></span></div>
+            <div class="data-item"><span class="d-label">RANK </span><span class="d-val" id="detailCourseYear"></span></div>
+            <div class="data-item"><span class="d-label">LIFESPAN </span><span class="d-val" id="detailAge"></span></div>
+            <div class="data-item"><span class="d-label">BASE </span><span class="d-val" id="address"></span></div>
+            <div class="data-item"><span class="d-label">OBJECTIVE </span><span class="d-val" id="careerGoals"></span></div>
           </div>
         </div>
-      </article>
+      </section>
 
-      <article class="profile-card project-card">
-        <h2>Featured Project</h2>
-        <ul class="detail-list">
-          <li><strong>Project Title:</strong> <span id="projectTitleDetail"></span></li>
-          <li><strong>Description:</strong> <span id="projectDescription"></span></li>
-          <li><strong>Technologies Used:</strong> <span id="projectTechnologies"></span></li>
-          <li><strong>Status:</strong> <span id="projectStatus"></span></li>
-          <li><strong>Project Link:</strong> <a id="projectLink" href="#" target="_blank" rel="noreferrer">Not available</a></li>
-        </ul>
-      </article>
-
-      <article class="profile-card achievements-card">
-        <h2>Certificates & Achievements</h2>
-        <ul class="detail-list">
-          <li><strong>Trainings Attended:</strong> <span id="trainings"></span></li>
-          <li><strong>Seminars / Workshops:</strong> <span id="seminars"></span></li>
-          <li><strong>Certificates Earned:</strong> <span id="certificates"></span></li>
-          <li><strong>Academic Awards:</strong> <span id="awards"></span></li>
-        </ul>
-      </article>
-
-      <article class="profile-card gallery-card">
-        <h2>Gallery Summary</h2>
-        <div class="gallery-grid">
-          <div><strong>Personal Photos</strong><span id="personalPhotos"></span></div>
-          <div><strong>School Activities</strong><span id="schoolActivities"></span></div>
-          <div><strong>Organizational Activities</strong><span id="orgActivities"></span></div>
-          <div><strong>Community Involvement</strong><span id="communityInvolvement"></span></div>
+      <section id="education" class="card card-narrow">
+        <div class="card-header">SYS_INFO::EDUCATION</div>
+        <div class="card-body">
+          <ul class="edu-list" id="educationList"></ul>
         </div>
-      </article>
+      </section>
 
-      <article class="profile-card contact-card">
-        <h2>Contact Me</h2>
-        <ul class="detail-list">
-          <li><strong>Email Address:</strong> <span id="email"></span></li>
-          <li><strong>Mobile Number:</strong> <span id="mobileNumber"></span></li>
-          <li><strong>Facebook Profile:</strong> <span id="facebook"></span></li>
-          <li><strong>LinkedIn Profile:</strong> <span id="linkedin"></span></li>
-        </ul>
-      </article>
-    </section>
+      <section id="skills" class="card card-full">
+        <div class="card-header">SYS_INFO::SKILL_TREE</div>
+        <div class="card-body">
+          <div class="skills-grid">
+            <div class="skill-group">
+              <h3>HARDWARE/TECH</h3>
+              <p id="technicalSkills"></p>
+            </div>
+            <div class="skill-group">
+              <h3>LANGUAGES</h3>
+              <p id="programmingLanguages"></p>
+            </div>
+            <div class="skill-group">
+              <h3>SOFTWARE</h3>
+              <p id="softwareApps"></p>
+            </div>
+            <div class="skill-group">
+              <h3>SOFT_SKILLS</h3>
+              <p id="softSkills"></p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <footer class="page-footer">
-      <p>© Renchel N. Silvosa • Last Updated July 6, 2026</p>
+      <section id="project" class="card card-wide">
+        <div class="card-header">DIR::LATEST_PROJECT</div>
+        <div class="card-body project-details">
+          <h3 id="projectTitleDetail"></h3>
+          <p class="proj-desc" id="projectDescription"></p>
+          <div class="data-list">
+            <div class="data-item"><span class="d-label">STACK </span><span class="d-val" id="projectTechnologies"></span></div>
+            <div class="data-item"><span class="d-label">STATUS </span><span class="d-val" id="projectStatus"></span></div>
+          </div>
+          <a class="action-btn sm-btn" id="projectLink" href="#" target="_blank" rel="noreferrer">EXECUTE_PROJECT</a>
+        </div>
+      </section>
+
+      <section id="contact" class="card card-narrow">
+        <div class="card-header">NETWORK::PING</div>
+        <div class="card-body">
+          <div class="data-list network-list">
+            <div class="data-item"><span class="d-label">MAIL </span><span class="d-val" id="email"></span></div>
+            <div class="data-item"><span class="d-label">COMMS </span><span class="d-val" id="mobileNumber"></span></div>
+            <div class="data-item"><span class="d-label">SOCIAL </span><span class="d-val" id="facebook"></span></div>
+            <div class="data-item"><span class="d-label">LINK </span><span class="d-val" id="linkedin"></span></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="terminal-footer">
+      <p>PROCESS TERMINATED C:\> Renchel N. Silvosa (c) 2026</p>
     </footer>
   </main>
 
